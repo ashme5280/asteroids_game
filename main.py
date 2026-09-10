@@ -23,6 +23,8 @@ def main():
             # #Otherwise you have to CTRL + C to quit
             if event.type == pygame.QUIT:
                 return
+        #CH3 L3 move player left and right using a & d keys
+        player.update(dt)
         screen.fill("black")
         #CH 3 L2 draw player after filling screen
         player.draw(screen)
