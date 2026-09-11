@@ -52,6 +52,15 @@ def main():
                 print("Game over!")
                 sys.exit()
 
+        #CH4 L5 Destruction
+        for ast_obj in asteroids:
+            for shot in shots:
+                if shot.collides_with(ast_obj) == True:
+                    log_event("asteroid_shot")
+                    shot.kill()
+                    ast_obj.kill()
+                    break
+
         screen.fill("black")
 
         #CH 3 L2 draw player after filling screen
